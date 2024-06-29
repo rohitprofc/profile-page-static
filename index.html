@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rohit Kavuluri</h1>
+        <div class="navtabs">
+            <button class="tablink active" onclick="openTab(event, 'bio')">Bio</button>
+            <button class="tablink" onclick="openTab(event, 'hobbies')">Hobbies</button>
+            <button class="tablink" onclick="openTab(event, 'contact')">Contact</button>
+        </div>
+    </header>
+    
+    <section id="bio" class="tabcontent">
+        <h2>About Me</h2>
+        <img src="https://res.cloudinary.com/dtdhmbtcg/image/upload/v1717091701/IMG_20210802_094632_ajd4cw.jpg" alt="Your Photo">
+        <p>"Hi! I'm a Full Stack Developer passionate about growth, innovation, and positive change. Seeking new opportunities to elevate my skills and contribute to impactful projects. Let's build a better future!"</p>
+    </section>
+    
+    <section id="hobbies" class="tabcontent" style="display:none">
+        <h2>Hobbies</h2>
+        <div class="hobbies-container">
+            <div class="hobby">
+                <img src="https://res.cloudinary.com/dtdhmbtcg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1715577244/chess_board_h1_view_y26kzp.jpg" alt="Hobby 1">
+                <h3>Chess</h3>
+                <p>Competetive <br> chess player.</p>
+            </div>
+            <div class="hobby">
+                <img src="https://res.cloudinary.com/dtdhmbtcg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1717094323/texture-treble-clef-dark-background-isolated-generative-ai_169016-29581_oskwjc.jpg" alt="Hobby 2">
+                <h3>Music</h3>
+                <p>Loves to <br> play piano.</p>
+            </div>
+            <div class="hobby">
+                <img src="https://res.cloudinary.com/dtdhmbtcg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1717094511/61-6q7cy2_L._AC_UF1000_1000_QL80__eyqlox.jpg" alt="Hobby 3">
+                <h3>Novels</h3>
+                <p>Inspired by <br> novels all time.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="tabcontent" style="display:none">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <button id="darkModeToggle" class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

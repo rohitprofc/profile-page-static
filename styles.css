@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.navtabs {
+    display: flex;
+    justify-content: center;
+    background-color: #2980b9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.navtabs .tablink {
+    background-color: transparent;
+    color: white;
+    padding: 14px 20px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.navtabs .tablink:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navtabs .tablink.active {
+    background-color: #fff;
+    color: #2980b9;
+    border-bottom: 3px solid #2980b9;
+}
+
+.tabcontent {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#hobbies .hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#hobbies .hobby {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--hobby-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#hobbies .hobby img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+#hobbies .hobby h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: var(--hobby-heading-color);
+}
+
+#hobbies .hobby p {
+    margin-top: 10px;
+    color: var(--hobby-text-color);
+}
+
+#hobbies .hobby:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+section img {
+    max-width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+form textarea {
+    height: 4.5em;
+    resize: vertical;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #16a085;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 10px;
+    border: 3px solid var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+}
+
+body {
+    --scrollbar-track-color-light: #f1f1f1;
+    --scrollbar-thumb-color-light: #2980b9;
+    --scrollbar-thumb-hover-color-light: #16a085;
+
+    --scrollbar-track-color: var(--scrollbar-track-color-light);
+    --scrollbar-thumb-color: var(--scrollbar-thumb-color-light);
+    --scrollbar-thumb-hover-color: var(--scrollbar-thumb-hover-color-light);
+}
+
+body.dark-mode {
+    --scrollbar-track-color-dark: #333;
+    --scrollbar-thumb-color-dark: #16a085;
+    --scrollbar-thumb-hover-color-dark: #2980b9;
+
+    --scrollbar-track-color: var(--scrollbar-track-color-dark);
+    --scrollbar-thumb-color: var(--scrollbar-thumb-color-dark);
+    --scrollbar-thumb-hover-color: var(--scrollbar-thumb-hover-color-dark);
+}
+
+#darkModeToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-mode header {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .navtabs {
+    background-color: #34495e;
+}
+
+body.dark-mode .navtabs .tablink {
+    background-color: #34495e;
+}
+
+body.dark-mode .navtabs .tablink.active {
+    background-color: #16a085;
+    color: white;
+}
+
+body.dark-mode .tabcontent {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-color: #16a085;
+}
+
+body.dark-mode form button {
+    background-color: #16a085;
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #16a085;
+}
+
+body.dark-mode #darkModeToggle:hover {
+    background-color: #2980b9;
+}
